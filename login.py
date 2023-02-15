@@ -1,5 +1,11 @@
 from tkinter import*
-from tkinter import messagebox
+import mysql.connector
+
+
+from tkinter import messagebox 
+
+
+
 
 root = Tk()
 root.geometry('500x500')
@@ -10,6 +16,7 @@ def login():
     password="1234"
     if entry_1.get()==username and entry_2.get()==password:
         messagebox.showinfo(title="Login Successful", message="You have successfully logged in")
+        import logindatabase
     else:
        messagebox.showerror(title="Error",message="Invalid Login")
 

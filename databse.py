@@ -1,6 +1,7 @@
 from tkinter import *
 from tkinter import messagebox
 import sqlite3
+
 from PIL import ImageTk, Image  
 
 
@@ -8,6 +9,8 @@ from PIL import ImageTk, Image
 conn = sqlite3.connect("loan_book.db")
 
 c = conn.cursor()
+
+
 
 # c.execute(""" CREATE TABLE loan(
 #     first_name text,
@@ -48,11 +51,14 @@ def submit():
 
         
     })
-    
+
     messagebox.showinfo("Loan","Inserted Successfully")
     conn.commit()
 
     conn.close()
+
+
+
 
 
 
@@ -74,6 +80,8 @@ def query():
 
     conn.commit()
     conn.close()
+
+
 
 
 
@@ -185,7 +193,7 @@ total_payment.place(x=140, y=440)
 
 
 
-submit_btn1= Button(root, text="Add Records", command=submit, height=1, width=9, bd=6,bg="Orange",fg="white").place(x=140, y=470)
+submit_btn1= Button(root, text="Register", command=submit, height=1, width=9, bd=6,bg="Orange",fg="white").place(x=140, y=470)
 
 
 
